@@ -69,6 +69,16 @@ function App() {
                 </h6>
               </div>
               <p className="card-text">{ativ.descricao}</p>
+              <div className="d-flex justify-content-end pt-2 m-0 border-top">
+                  <button className="btn btn-outline-primary me-2 btn-sm">
+                    <i className="fas fa-pen me-2"></i>
+                    Editar
+                  </button>
+                  <button className="btn btn-outline-danger me-2 btn-sm">
+                  <i className="fas fa-trash me-2"></i>
+                    Deletar
+                  </button>
+              </div>
             </div>
           </div>
         ))}
