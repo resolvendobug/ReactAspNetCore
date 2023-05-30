@@ -26,7 +26,7 @@ function App() {
     e.preventDefault();
 
     const atividade = {
-      id: document.getElementById("id").value,
+      id: Math.max.apply(Math,atividades.map((item) => item.id))+1 ,  // document.getElementById("id").value,
       prioridade: document.getElementById("prioridade").value,
       titulo: document.getElementById("titulo").value,
       descricao: document.getElementById("descricao").value,
@@ -44,8 +44,10 @@ function App() {
 
   function pegarAtividade(id){
     const atividade = atividades.filter((item) => item.id === id);
-    setAtividade([...atividade]);
+    //setAtividade([...atividade]);
+    setAtividade(atividade[0]);
   }
+  
 
   
   return (
